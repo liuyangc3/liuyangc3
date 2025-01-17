@@ -56,6 +56,12 @@ Set http credential cache
 git config --global credential.helper "cache --timeout=86400" # 86400s=24h
 ```
 
+Switch to remote branch
+```bash
+git switch -c test origin/test
+```
+
+
 ## Jetbrain IDEs
 
 short cut | explaintion
