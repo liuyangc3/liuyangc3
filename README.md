@@ -46,6 +46,13 @@ git push --delete origin $tag
 git push origin :$tag
 ```
 
+in forked repo, fetch a tag from upstream
+
+```bash
+git fetch upstream tag v2.2.14 --no-tags
+git push --tags
+```
+
 allow auto push to remote new branch
 ```bash
 git config push.autoSetupRemote true
