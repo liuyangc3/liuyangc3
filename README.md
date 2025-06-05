@@ -5,6 +5,11 @@ Set the git credentail
 git config --global url."https://liuyangc3:${GITHUB_TOKEN}@git.example.com".insteadOf "https://git.example.com"
 ```
 
+Set credentail cache
+```bash
+git config --global credential.helper "cache --timeout=86400"
+```
+
 Remove all git branchs except `master` or `main`
 ```bash
 git branch | grep -v -e master -e main | xargs git branch -D
