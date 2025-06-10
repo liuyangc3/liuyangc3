@@ -85,9 +85,25 @@ uv add 'requests==2.31.0'
 # Add a git dependency
 uv add git+https://github.com/psf/requests
 
+# Add git dependency with a name
+uv add "httpx @ git+https://github.com/encode/httpx"
+
+# add dependency from local path
+uv add "httpx @ ../httpx"
+
 # Add all dependencies from `requirements.txt`
 uv add -r requirements.txt
 ```
+
+Add dependencies with [environment-markers](https://peps.python.org/pep-0508/#environment-markers)
+```bash
+# dependency only install on a specific platform 
+uv add "jax; sys_platform == 'linux'"
+
+# dependency only install on a specific Python versions 
+uv add "numpy; python_version >= '3.11'"
+```
+
 
 Remove dependencies
 ```bash
