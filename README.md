@@ -73,6 +73,26 @@ Switch to remote branch
 git switch -c test origin/test
 ```
 
+## uv
+
+Add dependencies
+```bash
+uv add requests
+
+# Specify a version constraint
+uv add 'requests==2.31.0'
+
+# Add a git dependency
+uv add git+https://github.com/psf/requests
+
+# Add all dependencies from `requirements.txt`
+uv add -r requirements.txt
+```
+
+Remove dependencies
+```bash
+uv remove requests
+```
 
 ## Jetbrain IDEs
 
